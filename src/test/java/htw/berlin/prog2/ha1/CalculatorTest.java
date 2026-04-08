@@ -89,6 +89,22 @@ class CalculatorTest {
     }
 
 
-    //TODO hier weitere Tests erstellen
+    //TODO hier weitere Tests erstellen ;
+
+    @Test
+    @DisplayName("normal Multiplication")
+    public void testMultiplication(){
+         Calculator calc = new Calculator();
+
+         calc.pressDigitKey(1);
+         calc.pressBinaryOperationKey("x");
+         calc.pressDigitKey(2);
+         calc.pressEqualsKey();
+
+         String expected = "2";
+         String actual = calc.readScreen();
+         assertEquals(expected, actual);
+    }
+
 }
 
