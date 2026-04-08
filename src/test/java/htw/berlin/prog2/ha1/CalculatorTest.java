@@ -92,7 +92,7 @@ class CalculatorTest {
     //TODO hier weitere Tests erstellen ;
 
     @Test
-    @DisplayName("normal Multiplication")
+    @DisplayName("normal Multiplication with integers")
     public void testMultiplication(){
          Calculator calc = new Calculator();
 
