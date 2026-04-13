@@ -123,7 +123,7 @@ class CalculatorTest {
 
     @Test
     @DisplayName("Root problem")
-    public void pressDoubleDot(){
+    public void pressDigitAfterClac(){
         Calculator calc = new Calculator();
 
         calc.pressDigitKey(9);
