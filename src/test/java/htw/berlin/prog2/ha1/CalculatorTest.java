@@ -106,5 +106,36 @@ class CalculatorTest {
          assertEquals(expected, actual);
     }
 
+    //TODO not working tests
+    @Test
+    @DisplayName("Only one number")
+    public void binaryOperationOnehanded(){
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(2);
+        calc.pressBinaryOperationKey("+");
+        calc.pressEqualsKey();
+
+        String expected = "Error";
+        String actual = calc.readScreen();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("Root problem")
+    public void pressDoubleDot(){
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(9);
+      //  calc.pressDotKey();
+        calc.pressUnaryOperationKey("√");
+        calc.pressDigitKey(2);
+       // calc.pressEqualsKey();
+
+        String expected = "2";
+        String actual = calc.readScreen();
+        assertEquals(expected, actual);
+    }
+
 }
 
