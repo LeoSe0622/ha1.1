@@ -127,10 +127,10 @@ class CalculatorTest {
         Calculator calc = new Calculator();
 
         calc.pressDigitKey(9);
-      //  calc.pressDotKey();
+        //  calc.pressDotKey();
         calc.pressUnaryOperationKey("√");
         calc.pressDigitKey(2);
-       // calc.pressEqualsKey();
+        // calc.pressEqualsKey();
 
         String expected = "2";
         String actual = calc.readScreen();
