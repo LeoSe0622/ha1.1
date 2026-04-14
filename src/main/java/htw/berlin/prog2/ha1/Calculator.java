@@ -16,6 +16,8 @@ public class Calculator {
 
     //counter für mindest anzahl an digits
     private int digitKeyCount;
+
+    private boolean answerIsShown = false;
     /**
      * @return den aktuellen Bildschirminhalt als String
      */
@@ -38,6 +40,11 @@ public class Calculator {
 
         //fix roter test eins
         digitKeyCount++;
+        // fix zweiter roter test:
+        if (answerIsShown == true){
+            screen = "";
+            answerIsShown=false;
+        }
         screen = screen + digit;
     }
 
@@ -87,6 +94,9 @@ public class Calculator {
             case "1/x" -> 1 / Double.parseDouble(screen);
             default -> throw new IllegalArgumentException();
         };
+        //fix2
+        answerIsShown= true;
+        //
         screen = Double.toString(result);
         if (screen.equals("NaN")) screen = "Error";
         if (screen.contains(".") && screen.length() > 11) screen = screen.substring(0, 10);

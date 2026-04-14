@@ -122,7 +122,7 @@ class CalculatorTest {
     }
 
     @Test
-    @DisplayName("Root problem")
+    @DisplayName("digit after rootclac")
     public void pressDigitAfterClac(){
         Calculator calc = new Calculator();
 
